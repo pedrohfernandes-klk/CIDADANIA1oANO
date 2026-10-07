@@ -20,6 +20,16 @@ Widget da aula 1 de M2: `M2-Expressao-algoritmos/aula-01/feed.html`, o «feed de
 
 Caminhos relativos a `10-ano/Cidadania/`.
 
+## PowerPoint (Cidadania I, versão atualizada com o que foi dado nas aulas)
+
+| Aula | Tema | Ficheiro | Conteúdo |
+|---|---|---|---|
+| 1 | O que vemos | `10-ano/Cidadania/M1-Ser-se-humano/aula-01/CD_I_Aula_01_INTP26.pptx` (15 diap.) | Caverna de Platão · CHIROPTERA (JR, Jalet, Bangalter) · This is Water (Wallace) · desdobramentos (Saramago, Truman Show, Ai Weiwei, Pariser) · referências |
+| 2 | O que somos | `10-ano/Cidadania/M1-Ser-se-humano/aula-02/CD_I_Aula_02_INTP26.pptx` (14 diap.) | Sísifo e Camus · Marina Abramović (Rhythm 0, The Artist Is Present) · desdobramentos (Ticiano, A Peste, Yoko Ono, Kitty Genovese, Ai Weiwei) · referências |
+
+O guião do professor está nas notas do orador de cada diapositivo. Gerados por `_interno/ferramentas/gerar_diapositivos.js`.
+Os HTML da aula 1 (`plano.html`, `diapositivos.html`, `ficha.html`) são a versão anterior, planeada antes da aula: não incluem estes temas.
+
 ## Peças partilhadas
 
 Não há: cada página HTML é autónoma (CSS e JavaScript no próprio ficheiro).

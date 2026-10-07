@@ -40,3 +40,15 @@
 - Cada página passou a ser autónoma (CSS e JavaScript dentro do ficheiro); os ficheiros partilhados foram apagados.
 - «Sair» (widget) e «Apagar respostas» (fichas) passaram a pedir um segundo toque, em vez de `confirm()`. O botão de imprimir esconde-se quando a página está embutida.
 - Publicado um artefacto privado com as 7 páginas: https://claude.ai/artifact/6pJxKPQAgrEiCJCe2KR6Fh (para os alunos o abrirem, é preciso partilhá-lo no menu Partilhar).
+
+## 2026-10-07 · PowerPoint das aulas 1 e 2 de Cidadania I
+
+**Feito**
+- Dois PowerPoint com o que foi efetivamente dado, organizados assim: aula 1 «O que vemos» (caverna de Platão; CHIROPTERA, que é o 2.º ato de «Retour à la caverne», do JR, na Ópera de Paris, 2023; This is Water) e aula 2 «O que somos» (Sísifo e Camus; Marina Abramović: Rhythm 0 e The Artist Is Present).
+- Cada um tem um diapositivo de desdobramentos («Daqui, para onde?»), com Ai Weiwei (Remembering, Citizens' Investigation, Rapture em Lisboa, Law of the Journey, Human Flow), Saramago, The Truman Show, Pariser, Ticiano, A Peste, Yoko Ono (Cut Piece) e o caso Kitty Genovese, e as referências com ligações.
+- Guião, tempos e cuidados nas notas do orador.
+
+**Por verificar**
+- Não consegui ver os diapositivos renderizados (o LibreOffice deste ambiente não abre ficheiros); verifiquei a estrutura, o texto que cabe em cada caixa e uma pré-visualização aproximada.
+- As ligações foram tiradas de resultados de pesquisa; não as consegui abrir uma a uma (a rede deste ambiente bloqueia esses sites).
+- Os HTML da aula 1 ficaram desatualizados em relação ao que foi dado.
