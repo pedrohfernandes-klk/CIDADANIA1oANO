@@ -61,3 +61,13 @@
 - 8 cartões por tema (48 no total), no widget e no anexo do plano para imprimir.
 - O cartão ao acaso vem sempre de outro tema (nem o 1.º nem o 2.º do ranking). Máximo por tema numa sessão: 1 + 3 + 3 = 7 < 8, por isso nenhum cartão se repete.
 - Testado: 10 000 sessões simuladas com o código da página, zero repetições. Regra atualizada no plano, nos diapositivos e no próprio widget.
+
+## 2026-10-07 · Site dos alunos, Módulo 1
+
+**Feito**
+- `docs/`: site para os alunos, só com material para eles (sem planos nem chaves). Páginas: início (módulo, aulas, avaliação), aula 1 «O que vemos», aula 2 «O que somos», projeto «Pergunta Humana» (fases, leitura lateral, ética das entrevistas, avaliação). Cada aula tem o diário com as perguntas de saída, guardado no aparelho do aluno, e um botão para copiar as respostas e enviar ao professor.
+- Gerado por `_interno/ferramentas/gerar_site.py`.
+- Publicado também como artefacto: https://claude.ai/artifact/UkG9oY2VZvBcuefaXqk9yL (privado até ser partilhado no menu Partilhar).
+
+**Por fazer (professor)**
+- Ligar o GitHub Pages: no repositório, Settings → Pages → «Deploy from a branch» → ramo `claude/cidadania-desenvolvimento-modulos-rv1e4q`, pasta `/docs`. Endereço previsto: https://pedrohfernandes-klk.github.io/CIDADANIA1oANO/
