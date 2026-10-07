@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aula 1 · O que vemos</title>
+<meta name="description" content="Cidadania e Desenvolvimento · Módulo 1 · Ser-se humano: investigação e informação · EPI 2026/2027">
+<style>
+:root{--fundo:#fff;--papel:#fff;--tinta:#000;--suave:#333;--cor:#2f6f7a;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--fundo:#000;--papel:#000;--tinta:#fff;--suave:#ccc;--cor:#7fc4cf;color-scheme:dark}}
+:root[data-theme=dark]{--fundo:#000;--papel:#000;--tinta:#fff;--suave:#ccc;--cor:#7fc4cf;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--tinta)}
+body{font:17px/1.5 Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--tinta)}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:3px solid var(--tinta);padding:10px 16px 8px}
+.topo .l1{display:flex;justify-content:space-between;align-items:baseline;gap:10px;max-width:720px;margin:auto}
+.marca{font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
+.topo nav{display:flex;gap:12px;flex-wrap:wrap;font:700 12.5px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px}
+.topo nav a{text-decoration:none;padding:4px 0}
+.topo nav a[aria-current=page]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+main{max-width:720px;margin:auto;padding:22px 16px 60px}
+h1{font:900 34px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;border-top:10px solid var(--tinta);padding-top:12px;margin:0 0 6px;text-wrap:balance}
+.sub{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin:0 0 18px}
+h2{font:900 13px/1 "Arial Black",Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;background:var(--tinta);color:var(--fundo);padding:8px 9px;margin:34px 0 12px}
+h3{font:900 16px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;margin:22px 0 8px;text-wrap:balance}
+p{margin:0 0 12px;max-width:65ch}
+ul,ol{margin:0 0 12px;padding-left:22px}li{margin-bottom:6px}
+.citacao{border:2px solid var(--tinta);border-left:12px solid var(--tinta);padding:14px 16px;font-size:19px;line-height:1.4;margin:12px 0}
+.citacao cite{display:block;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-top:8px;color:var(--cor)}
+.ret{margin:14px 0;padding:12px 14px;border:2px solid var(--tinta);border-left:12px solid var(--cor)}
+.palavra{font:900 11.5px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px}
+.grelha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:10px;margin:12px 0}
+.cartao{border:2px solid var(--tinta);padding:12px 14px;min-width:0}
+.cartao b{display:block;font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.cartao.escuro{background:var(--tinta);color:var(--fundo)}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{border-bottom:1px solid var(--tinta);margin:0}
+.lista a{display:block;padding:14px 4px;min-height:48px;text-decoration:none}
+.lista a b{display:block;font:900 20px/1.15 "Arial Black",Arial,sans-serif;text-transform:uppercase}
+.lista a small{display:block;font-size:14px;color:var(--suave);margin-top:4px}
+.passos{counter-reset:p;list-style:none;padding:0}
+.passos li{counter-increment:p;position:relative;padding-left:48px;min-height:36px;margin-bottom:14px}
+.passos li::before{content:counter(p);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--tinta);color:var(--fundo);font:900 16px/34px "Arial Black",Arial,sans-serif;text-align:center}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 14px}
+th,td{border:2px solid var(--tinta);padding:8px 10px;text-align:left;vertical-align:top}
+th{font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:.8px}
+td.n{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tabela{overflow-x:auto}
+.ligacoes{list-style:none;padding:0}
+.ligacoes li{border-left:4px solid var(--cor);padding:4px 0 4px 10px;margin-bottom:10px}
+.ligacoes small{display:block;color:var(--suave);font-size:13.5px}
+.aviso{font-size:14px;border:2px dashed var(--tinta);padding:10px 12px;margin:12px 0}
+.campo{margin:12px 0 16px}
+.campo label{display:block;font-weight:700;margin-bottom:6px}
+textarea,input[type=text]{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--tinta);background:var(--papel);color:var(--tinta);border-radius:0}
+textarea{min-height:96px;resize:vertical}
+.acoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn{min-height:48px;border:2px solid var(--tinta);background:var(--tinta);color:var(--fundo);font:700 14px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px;padding:14px 18px;cursor:pointer}
+.btn.sec{background:var(--fundo);color:var(--tinta)}
+.estado{font-size:14px;min-height:20px;margin-top:8px}
+.nota{font-size:13.5px;color:var(--suave)}
+footer{max-width:720px;margin:0 auto;padding:16px 16px 40px;font-size:12.5px;border-top:2px solid var(--tinta)}
+a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--tinta);outline-offset:2px}
+@media (max-width:480px){h1{font-size:27px}.topo .l1{flex-direction:column;gap:6px}}
+@media print{.topo{position:static}.acoes,.topo nav{display:none}}
+</style></head><body>
+<header class="topo"><div class="l1"><a class="marca" href="index.html">Cidadania I · INTP26</a><nav aria-label="Páginas do módulo"><a href="index.html">Início</a><a href="aula-1.html" aria-current=page>Aula 1</a><a href="aula-2.html">Aula 2</a><a href="projeto.html">Projeto</a></nav></div></header>
+<main>
+
+<h1>O que vemos</h1>
+<p class="sub">Aula 1 · Cidadania I · Ser-se humano</p>
+<p>Três imagens de pessoas que não veem aquilo em que vivem: prisioneiros numa caverna, uma gruta pintada na fachada de uma ópera e dois peixes que não sabem o que é a água.</p>
+
+<h2>1 · A caverna de Platão</h2>
+<blockquote class="citacao">Suponhamos uns homens numa habitação subterrânea em forma de caverna, com uma entrada aberta para a luz. Estão lá dentro desde a infância, algemados de pernas e pescoços, de tal maneira que só lhes é dado permanecer no mesmo lugar e olhar em frente.<cite>Platão, A República, livro VII (c. 375 a.C.)</cite></blockquote>
+<p>Atrás dos prisioneiros há um muro e um fogo. Pessoas passam por trás do muro com objetos, e o fogo projeta as sombras desses objetos na parede do fundo. Os prisioneiros só veem as sombras e julgam que são as próprias coisas.</p>
+<h3>Sair da caverna, em quatro momentos</h3>
+<ol class="passos">
+<li><b>Sombras.</b> Toma-se a sombra pela coisa. Tudo parece claro.</li>
+<li><b>Virar-se.</b> Um prisioneiro é solto e vê o fogo. A luz dói nos olhos.</li>
+<li><b>Sair.</b> Sobe ao exterior e, aos poucos, vê as coisas e o sol.</li>
+<li><b>Voltar.</b> Desce para contar o que viu. Os outros riem-se e não acreditam.</li>
+</ol>
+<h3>Que paredes temos hoje?</h3>
+<div class="grelha">
+<div class="cartao"><b>O feed</b>mostra o que um algoritmo escolheu para ti</div>
+<div class="cartao"><b>A notícia partilhada</b>chega sem autor, sem data, sem contexto</div>
+<div class="cartao"><b>A resposta da IA</b>soa segura, mesmo quando inventa</div>
+<div class="cartao"><b>O grupo da turma</b>repete o que todos já pensam</div>
+</div>
+<div class="ret"><span class="palavra">A ideia a levar</span>Investigar é virar a cabeça: perguntar de onde vem a luz que faz a sombra.</div>
+
+<h2>2 · CHIROPTERA</h2>
+<p>Em 2023, o Palais Garnier, a Ópera de Paris, estava em obras. O artista <b>JR</b> cobriu os andaimes com uma enorme gruta pintada em trompe-l'œil: <i>Retour à la caverne</i> («Regresso à caverna»).</p>
+<div class="grelha">
+<div class="cartao"><b>Quando</b>12 de novembro de 2023, na Place de l'Opéra, à frente de milhares de pessoas.</div>
+<div class="cartao"><b>Quem dança</b>Mais de 150 bailarinos na fachada, com coreografia de Damien Jalet.</div>
+<div class="cartao"><b>A música</b>Thomas Bangalter (ex-Daft Punk): uma faixa de cerca de 17 minutos e uma versão de quase 6 horas.</div>
+</div>
+<p><i>Chiroptera</i> é o nome científico dos <b>morcegos</b>. Vivem nas grutas e orientam-se no escuro pelo eco: emitem um som e «ouvem» a forma das coisas. O prisioneiro de Platão só confia no que vê; o morcego confia noutra coisa.</p>
+<div class="ret"><span class="palavra">Pergunta</span>A obra mostra-nos a caverna ou põe-nos dentro dela? E que «eco» podemos usar para nos orientarmos no meio de tanta informação?</div>
+
+<h2>3 · This is Water</h2>
+<blockquote class="citacao">Dois peixes jovens vão a nadar e cruzam-se com um peixe mais velho, que lhes acena e diz: «Bom dia, rapazes. Como está a água?» Os dois peixes nadam mais um bocado, até que um olha para o outro e pergunta: «Que raio é a água?»<cite>David Foster Wallace, discurso no Kenyon College, 21 de maio de 2005 · tradução livre</cite></blockquote>
+<p>A <b>água</b> é aquilo que é tão constante que deixamos de ver. Wallace chama <i>default setting</i>, a configuração de fábrica, ao modo automático em que cada um se vê como o centro do mundo: a fila do supermercado, o trânsito e as outras pessoas parecem existir só para nos atrasar.</p>
+<p>Para ele, pensar é escolher para onde olhar. A liberdade que conta faz-se de atenção, consciência e esforço, todos os dias.</p>
+
+<h2>Juntar as três</h2>
+<div class="grelha">
+<div class="cartao"><b>Caverna · Platão</b>Tomamos sombras por coisas.</div>
+<div class="cartao escuro"><b>Gruta na ópera · JR, Jalet, Bangalter</b>A arte põe a caverna à vista de milhares de pessoas de uma vez.</div>
+<div class="cartao"><b>Água · Wallace</b>Não vemos aquilo em que vivemos.</div>
+</div>
+<h2 id="diario">O teu diário de investigação</h2><p>Escreve aqui ou no teu caderno. Fica guardado só neste aparelho. No fim, copia e envia ao professor.</p><div class="campo"><label for="nome">Nome</label><input type="text" id="nome" data-guardar="nome" autocomplete="name"></div><div class="campo"><label for="aula1-1">Qual é a tua água? Uma coisa que fazes em modo automático e que hoje viste pela primeira vez.</label><textarea id="aula1-1" data-guardar="aula1-1"></textarea></div><div class="campo"><label for="aula1-2">Uma informação que aceitaste esta semana sem verificar. Onde a podias confirmar?</label><textarea id="aula1-2" data-guardar="aula1-2"></textarea></div><div class="acoes"><button class="btn" id="copiar" type="button">Copiar as minhas respostas</button></div><p class="estado" id="estado" role="status"></p><textarea id="texto-copia" hidden aria-label="Texto para copiar"></textarea>
+<h2>Para ir mais longe</h2>
+<h3>Daqui, para onde?</h3>
+<div class="grelha">
+<div class="cartao"><b>De Platão</b>José Saramago, <i>A Caverna</i> (2000): um oleiro perde o trabalho para um centro comercial gigante, onde as obras descobrem uma gruta.<br><br>Peter Weir, <i>The Truman Show</i> (1998): um homem vive, sem saber, dentro de um programa de televisão.</div>
+<div class="cartao"><b>De CHIROPTERA</b>Ai Weiwei, <i>Remembering</i> (Munique, 2009): 9 000 mochilas na fachada de um museu formam a frase de uma mãe: «Ela viveu feliz durante sete anos neste mundo.»<br><br>Ai Weiwei, <i>Citizens' Investigation</i> (2008–2011): sem números oficiais, voluntários apuraram os nomes de 5 196 alunos mortos no sismo de Sichuan.</div>
+<div class="cartao"><b>De Wallace</b>Eli Pariser, <i>The Filter Bubble</i> (2011): a «água» do século XXI é o mundo que um algoritmo escolhe para cada um.<br><br>Ai Weiwei, <i>Rapture</i> (Lisboa, Cordoaria Nacional, 2021): obras sobre vigilância, refugiados e liberdade de expressão.</div>
+</div>
+<h3>Ligações</h3>
+<ul class="ligacoes"><li><a href="https://pt.wikipedia.org/wiki/Alegoria_da_caverna" target="_blank" rel="noopener">Alegoria da caverna (Wikipédia)</a><small>Platão, A República, livro VII. Tradução portuguesa: Maria Helena da Rocha Pereira, Fundação Calouste Gulbenkian.</small></li><li><a href="https://jr-art.net/projects/chiroptera" target="_blank" rel="noopener">JR, Retour à la caverne, Acte II: CHIROPTERA</a><small>Imagens e vídeo da performance, no site do artista.</small></li><li><a href="https://ra.co/news/81822" target="_blank" rel="noopener">Documentário «Dans la lumière», sobre CHIROPTERA</a><small>Realizado por Vincent Lorca, cerca de 30 minutos.</small></li><li><a href="https://musictech.com/news/music/thomas-bangalter-new-track-chiroptera/" target="_blank" rel="noopener">Thomas Bangalter, CHIROPTERA: a música</a></li><li><a href="https://fs.blog/david-foster-wallace-this-is-water/" target="_blank" rel="noopener">David Foster Wallace, This is Water: transcrição e áudio</a><small>O discurso completo, em inglês.</small></li><li><a href="https://www.britannica.com/topic/Remembering-art-installation-by-Ai-Weiwei" target="_blank" rel="noopener">Ai Weiwei, Remembering (Britannica)</a><small>Em inglês.</small></li><li><a href="https://lissongallery.com/news/rapture-a-major-exhibition-by-ai-weiwei-opens-at-cordoaria-nacional-in-lisbon" target="_blank" rel="noopener">Ai Weiwei, Rapture, Lisboa 2021 (Lisson Gallery)</a><small>Em inglês.</small></li></ul>
+</main>
+<footer>Cidadania e Desenvolvimento · EPI – Escola Profissional de Imagem · 2026/2027 · turma INTP26. As respostas que escreves aqui ficam guardadas só no teu aparelho.</footer>
+<script>
+(function(){
+  /* respostas guardadas só neste aparelho */
+  function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function gravar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  var campos=[].slice.call(document.querySelectorAll('[data-guardar]'));
+  campos.forEach(function(c){
+    var k='cd1-'+c.dataset.guardar,v=ler(k);if(v!==null)c.value=v;
+    c.addEventListener('input',function(){gravar(k,c.value)});
+  });
+  var copiar=document.getElementById('copiar'),estado=document.getElementById('estado');
+  if(copiar)copiar.addEventListener('click',function(){
+    var nome=(document.querySelector('[data-guardar=nome]')||{}).value||'';
+    var txt=document.title+(nome?' · '+nome:'')+'\n\n'+campos.filter(function(c){return c.dataset.guardar!=='nome'}).map(function(c){
+      var l=document.querySelector('label[for='+c.id+']');return (l?l.textContent:'')+'\n'+(c.value||'(sem resposta)');
+    }).join('\n\n');
+    var ok=function(){estado.textContent='Copiado. Cola no e-mail ou na plataforma da turma.'};
+    var falha=function(){var t=document.getElementById('texto-copia');t.hidden=false;t.value=txt;t.focus();t.select();estado.textContent='Não deu para copiar sozinho: o texto está selecionado em baixo, copia-o tu.'};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(ok,falha);else falha();
+  });
+})();
+</script>
+</body></html>

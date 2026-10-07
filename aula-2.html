@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aula 2 · O que somos</title>
+<meta name="description" content="Cidadania e Desenvolvimento · Módulo 1 · Ser-se humano: investigação e informação · EPI 2026/2027">
+<style>
+:root{--fundo:#fff;--papel:#fff;--tinta:#000;--suave:#333;--cor:#2f6f7a;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--fundo:#000;--papel:#000;--tinta:#fff;--suave:#ccc;--cor:#7fc4cf;color-scheme:dark}}
+:root[data-theme=dark]{--fundo:#000;--papel:#000;--tinta:#fff;--suave:#ccc;--cor:#7fc4cf;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--tinta)}
+body{font:17px/1.5 Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--tinta)}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:3px solid var(--tinta);padding:10px 16px 8px}
+.topo .l1{display:flex;justify-content:space-between;align-items:baseline;gap:10px;max-width:720px;margin:auto}
+.marca{font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
+.topo nav{display:flex;gap:12px;flex-wrap:wrap;font:700 12.5px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px}
+.topo nav a{text-decoration:none;padding:4px 0}
+.topo nav a[aria-current=page]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+main{max-width:720px;margin:auto;padding:22px 16px 60px}
+h1{font:900 34px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;border-top:10px solid var(--tinta);padding-top:12px;margin:0 0 6px;text-wrap:balance}
+.sub{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin:0 0 18px}
+h2{font:900 13px/1 "Arial Black",Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;background:var(--tinta);color:var(--fundo);padding:8px 9px;margin:34px 0 12px}
+h3{font:900 16px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;margin:22px 0 8px;text-wrap:balance}
+p{margin:0 0 12px;max-width:65ch}
+ul,ol{margin:0 0 12px;padding-left:22px}li{margin-bottom:6px}
+.citacao{border:2px solid var(--tinta);border-left:12px solid var(--tinta);padding:14px 16px;font-size:19px;line-height:1.4;margin:12px 0}
+.citacao cite{display:block;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-top:8px;color:var(--cor)}
+.ret{margin:14px 0;padding:12px 14px;border:2px solid var(--tinta);border-left:12px solid var(--cor)}
+.palavra{font:900 11.5px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px}
+.grelha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:10px;margin:12px 0}
+.cartao{border:2px solid var(--tinta);padding:12px 14px;min-width:0}
+.cartao b{display:block;font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.cartao.escuro{background:var(--tinta);color:var(--fundo)}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{border-bottom:1px solid var(--tinta);margin:0}
+.lista a{display:block;padding:14px 4px;min-height:48px;text-decoration:none}
+.lista a b{display:block;font:900 20px/1.15 "Arial Black",Arial,sans-serif;text-transform:uppercase}
+.lista a small{display:block;font-size:14px;color:var(--suave);margin-top:4px}
+.passos{counter-reset:p;list-style:none;padding:0}
+.passos li{counter-increment:p;position:relative;padding-left:48px;min-height:36px;margin-bottom:14px}
+.passos li::before{content:counter(p);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--tinta);color:var(--fundo);font:900 16px/34px "Arial Black",Arial,sans-serif;text-align:center}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 14px}
+th,td{border:2px solid var(--tinta);padding:8px 10px;text-align:left;vertical-align:top}
+th{font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:.8px}
+td.n{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tabela{overflow-x:auto}
+.ligacoes{list-style:none;padding:0}
+.ligacoes li{border-left:4px solid var(--cor);padding:4px 0 4px 10px;margin-bottom:10px}
+.ligacoes small{display:block;color:var(--suave);font-size:13.5px}
+.aviso{font-size:14px;border:2px dashed var(--tinta);padding:10px 12px;margin:12px 0}
+.campo{margin:12px 0 16px}
+.campo label{display:block;font-weight:700;margin-bottom:6px}
+textarea,input[type=text]{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--tinta);background:var(--papel);color:var(--tinta);border-radius:0}
+textarea{min-height:96px;resize:vertical}
+.acoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn{min-height:48px;border:2px solid var(--tinta);background:var(--tinta);color:var(--fundo);font:700 14px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px;padding:14px 18px;cursor:pointer}
+.btn.sec{background:var(--fundo);color:var(--tinta)}
+.estado{font-size:14px;min-height:20px;margin-top:8px}
+.nota{font-size:13.5px;color:var(--suave)}
+footer{max-width:720px;margin:0 auto;padding:16px 16px 40px;font-size:12.5px;border-top:2px solid var(--tinta)}
+a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--tinta);outline-offset:2px}
+@media (max-width:480px){h1{font-size:27px}.topo .l1{flex-direction:column;gap:6px}}
+@media print{.topo{position:static}.acoes,.topo nav{display:none}}
+</style></head><body>
+<header class="topo"><div class="l1"><a class="marca" href="index.html">Cidadania I · INTP26</a><nav aria-label="Páginas do módulo"><a href="index.html">Início</a><a href="aula-1.html">Aula 1</a><a href="aula-2.html" aria-current=page>Aula 2</a><a href="projeto.html">Projeto</a></nav></div></header>
+<main>
+
+<h1>O que somos</h1>
+<p class="sub">Aula 2 · Cidadania I · Ser-se humano</p>
+<p>Depois de «o que vemos», a pergunta muda: o que é isto de ser humano? Duas respostas: um mito grego lido por um escritor do século XX e uma artista que usa o próprio corpo como material.</p>
+
+<h2>1 · Sísifo</h2>
+<p>Sísifo, rei de Corinto, enganou os deuses e até a morte. O castigo: empurrar uma pedra até ao cimo de uma montanha. Mal chega lá acima, a pedra rola de volta, e ele recomeça. Para sempre. O mito aparece já na <i>Odisseia</i> de Homero (canto XI).</p>
+<blockquote class="citacao">A própria luta para atingir os píncaros basta para encher um coração de homem. É preciso imaginar Sísifo feliz.<cite>Albert Camus, O Mito de Sísifo (1942), últimas linhas</cite></blockquote>
+<div class="grelha">
+<div class="cartao"><b>O absurdo</b>Queremos que a vida tenha sentido, e o mundo não nos responde.</div>
+<div class="cartao"><b>A resposta de Camus</b>Não fugir: viver com lucidez e fazer da pedra a nossa coisa.</div>
+</div>
+<h3>Três Sísifos</h3>
+<p>Em aula, empurrámos uma pedra imaginária de três maneiras: <b>desesperado</b> (a pedra é um castigo), <b>indiferente</b> (a pedra é só rotina) e <b>feliz</b> (a pedra é minha). A pedra era a mesma; o corpo mudou. É essa a ideia de Camus: o sentido que damos a uma tarefa muda a tarefa.</p>
+
+<h2>2 · Marina Abramović</h2>
+<p>Marina Abramović (Belgrado, 1946) é uma das artistas que definiram a <b>performance</b>, uma arte em que o material da obra é o corpo da própria artista.</p>
+<h3>Rhythm 0 · Nápoles, 1974</h3>
+<div class="grelha">
+<div class="cartao"><b>6 horas</b>imóvel, numa galeria</div>
+<div class="cartao"><b>72 objetos</b>numa mesa: de uma rosa e uma pena a uma tesoura e uma faca</div>
+<div class="cartao"><b>1 instrução</b>o público podia usá-los nela como quisesse</div>
+</div>
+<p class="aviso">Ao longo das horas, parte do público passou de gestos inofensivos a gestos violentos, e houve quem a defendesse. As imagens e os relatos desta obra são fortes.</p>
+<div class="ret"><span class="palavra">Pergunta</span>O que fazemos ao outro quando não há regras? A dignidade depende de a outra pessoa a respeitar? A Declaração Universal dos Direitos Humanos começa assim: «Todos os seres humanos nascem livres e iguais em dignidade e em direitos.» (artigo 1.º)</div>
+<h3>The Artist Is Present · MoMA, Nova Iorque, 2010</h3>
+<p>Durante quase três meses, mais de 736 horas no total, Abramović esteve sentada em silêncio no átrio do museu. Quem quisesse sentava-se à frente dela e olhava-a nos olhos o tempo que quisesse. Houve quem chorasse, quem risse e quem não aguentasse um minuto.</p>
+<p>Em aula fizemos o mesmo, em pares, durante um minuto. Estar presente é o contrário do modo automático de que falava Wallace na aula 1.</p>
+
+<h2>Ser humano é…</h2>
+<div class="grelha">
+<div class="cartao"><b>Sísifo</b>dar sentido a um esforço que não acaba</div>
+<div class="cartao"><b>Rhythm 0</b>depender do modo como os outros nos tratam</div>
+<div class="cartao"><b>The Artist Is Present</b>ser visto, e conseguir olhar o outro</div>
+</div>
+<h2 id="diario">O teu diário de investigação</h2><p>Escreve aqui ou no teu caderno. Fica guardado só neste aparelho. No fim, copia e envia ao professor.</p><div class="campo"><label for="nome">Nome</label><input type="text" id="nome" data-guardar="nome" autocomplete="name"></div><div class="campo"><label for="aula2-1">Qual é a tua pedra? Uma pedra que empurras todos os dias. Consegues imaginar-te feliz a empurrá-la?</label><textarea id="aula2-1" data-guardar="aula2-1"></textarea></div><div class="campo"><label for="aula2-2">Uma palavra para o minuto em que olhaste o teu colega. Porquê essa?</label><textarea id="aula2-2" data-guardar="aula2-2"></textarea></div><div class="campo"><label for="aula2-3">Uma pergunta sobre ser-se humano que gostavas de investigar no projeto.</label><textarea id="aula2-3" data-guardar="aula2-3"></textarea></div><div class="acoes"><button class="btn" id="copiar" type="button">Copiar as minhas respostas</button></div><p class="estado" id="estado" role="status"></p><textarea id="texto-copia" hidden aria-label="Texto para copiar"></textarea>
+<h2>Para ir mais longe</h2>
+<h3>Daqui, para onde?</h3>
+<div class="grelha">
+<div class="cartao"><b>De Sísifo</b>Ticiano, <i>Sísifo</i> (1548–1549), no Museo del Prado, em Madrid: o corpo dobrado sob a pedra.<br><br>Albert Camus, <i>A Peste</i> (1947): uma cidade fechada por uma epidemia, onde a revolta deixa de ser de um e passa a ser de todos.</div>
+<div class="cartao"><b>De Rhythm 0</b>Yoko Ono, <i>Cut Piece</i> (Tóquio, 1964): dez anos antes, sentada num palco, deixa o público cortar-lhe a roupa com uma tesoura.<br><br>O caso Kitty Genovese (Nova Iorque, 1964) deu origem à ideia de «efeito do espectador», mas em 2016 o <i>New York Times</i> admitiu que tinha exagerado o número de testemunhas. É um caso sobre quem só vê e também sobre informação errada.</div>
+<div class="cartao"><b>De Abramović</b>Ai Weiwei, <i>Law of the Journey</i> (2016): um barco insuflável de 16 metros cheio de figuras humanas, os refugiados. Esteve em Lisboa em 2021.<br><br>Ai Weiwei, <i>Human Flow</i> (2017): documentário sobre refugiados em vários países do mundo.</div>
+</div>
+<h3>Ligações</h3>
+<ul class="ligacoes"><li><a href="https://pt.wikipedia.org/wiki/S%C3%ADsifo" target="_blank" rel="noopener">Sísifo (Wikipédia)</a><small>Homero, Odisseia, canto XI, tradução de Frederico Lourenço · Albert Camus, O Mito de Sísifo, 1942.</small></li><li><a href="https://en.wikipedia.org/wiki/Rhythm_0" target="_blank" rel="noopener">Marina Abramović, Rhythm 0 (Wikipédia)</a><small>Em inglês. Contém descrições de violência.</small></li><li><a href="https://www.moma.org/audio/3118" target="_blank" rel="noopener">MoMA, Marina Abramović: The Artist Is Present (guia áudio)</a><small>Em inglês.</small></li><li>Documentário «Marina Abramović: The Artist Is Present»<small>Realizado por Matthew Akers, 2012.</small></li><li><a href="https://www.moma.org/calendar/exhibitions/1494" target="_blank" rel="noopener">MoMA, Yoko Ono: One Woman Show, 1960–1971 (inclui Cut Piece)</a><small>Em inglês.</small></li><li><a href="https://en.wikipedia.org/wiki/Murder_of_Kitty_Genovese" target="_blank" rel="noopener">O caso Kitty Genovese (Wikipédia)</a><small>Em inglês. Descreve um crime violento.</small></li><li><a href="https://lissongallery.com/news/rapture-a-major-exhibition-by-ai-weiwei-opens-at-cordoaria-nacional-in-lisbon" target="_blank" rel="noopener">Ai Weiwei, Rapture, Lisboa 2021 (Lisson Gallery)</a><small>Em inglês.</small></li></ul>
+</main>
+<footer>Cidadania e Desenvolvimento · EPI – Escola Profissional de Imagem · 2026/2027 · turma INTP26. As respostas que escreves aqui ficam guardadas só no teu aparelho.</footer>
+<script>
+(function(){
+  /* respostas guardadas só neste aparelho */
+  function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function gravar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  var campos=[].slice.call(document.querySelectorAll('[data-guardar]'));
+  campos.forEach(function(c){
+    var k='cd1-'+c.dataset.guardar,v=ler(k);if(v!==null)c.value=v;
+    c.addEventListener('input',function(){gravar(k,c.value)});
+  });
+  var copiar=document.getElementById('copiar'),estado=document.getElementById('estado');
+  if(copiar)copiar.addEventListener('click',function(){
+    var nome=(document.querySelector('[data-guardar=nome]')||{}).value||'';
+    var txt=document.title+(nome?' · '+nome:'')+'\n\n'+campos.filter(function(c){return c.dataset.guardar!=='nome'}).map(function(c){
+      var l=document.querySelector('label[for='+c.id+']');return (l?l.textContent:'')+'\n'+(c.value||'(sem resposta)');
+    }).join('\n\n');
+    var ok=function(){estado.textContent='Copiado. Cola no e-mail ou na plataforma da turma.'};
+    var falha=function(){var t=document.getElementById('texto-copia');t.hidden=false;t.value=txt;t.focus();t.select();estado.textContent='Não deu para copiar sozinho: o texto está selecionado em baixo, copia-o tu.'};
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(ok,falha);else falha();
+  });
+})();
+</script>
+</body></html>

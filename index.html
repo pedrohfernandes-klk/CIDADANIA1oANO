@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cidadania I · Ser-se humano</title>
+<meta name="description" content="Cidadania e Desenvolvimento · Módulo 1 · Ser-se humano: investigação e informação · EPI 2026/2027">
+<style>
+:root{--fundo:#fff;--papel:#fff;--tinta:#000;--suave:#333;--cor:#2f6f7a;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--fundo:#000;--papel:#000;--tinta:#fff;--suave:#ccc;--cor:#7fc4cf;color-scheme:dark}}
+:root[data-theme=dark]{--fundo:#000;--papel:#000;--tinta:#fff;--suave:#ccc;--cor:#7fc4cf;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fundo);color:var(--tinta)}
+body{font:17px/1.5 Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--tinta)}
+.topo{position:sticky;top:0;z-index:5;background:var(--fundo);border-bottom:3px solid var(--tinta);padding:10px 16px 8px}
+.topo .l1{display:flex;justify-content:space-between;align-items:baseline;gap:10px;max-width:720px;margin:auto}
+.marca{font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;text-decoration:none}
+.topo nav{display:flex;gap:12px;flex-wrap:wrap;font:700 12.5px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px}
+.topo nav a{text-decoration:none;padding:4px 0}
+.topo nav a[aria-current=page]{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+main{max-width:720px;margin:auto;padding:22px 16px 60px}
+h1{font:900 34px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;border-top:10px solid var(--tinta);padding-top:12px;margin:0 0 6px;text-wrap:balance}
+.sub{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin:0 0 18px}
+h2{font:900 13px/1 "Arial Black",Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;background:var(--tinta);color:var(--fundo);padding:8px 9px;margin:34px 0 12px}
+h3{font:900 16px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;margin:22px 0 8px;text-wrap:balance}
+p{margin:0 0 12px;max-width:65ch}
+ul,ol{margin:0 0 12px;padding-left:22px}li{margin-bottom:6px}
+.citacao{border:2px solid var(--tinta);border-left:12px solid var(--tinta);padding:14px 16px;font-size:19px;line-height:1.4;margin:12px 0}
+.citacao cite{display:block;font-size:12px;font-style:normal;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-top:8px;color:var(--cor)}
+.ret{margin:14px 0;padding:12px 14px;border:2px solid var(--tinta);border-left:12px solid var(--cor)}
+.palavra{font:900 11.5px/1 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:6px}
+.grelha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:10px;margin:12px 0}
+.cartao{border:2px solid var(--tinta);padding:12px 14px;min-width:0}
+.cartao b{display:block;font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.cartao.escuro{background:var(--tinta);color:var(--fundo)}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{border-bottom:1px solid var(--tinta);margin:0}
+.lista a{display:block;padding:14px 4px;min-height:48px;text-decoration:none}
+.lista a b{display:block;font:900 20px/1.15 "Arial Black",Arial,sans-serif;text-transform:uppercase}
+.lista a small{display:block;font-size:14px;color:var(--suave);margin-top:4px}
+.passos{counter-reset:p;list-style:none;padding:0}
+.passos li{counter-increment:p;position:relative;padding-left:48px;min-height:36px;margin-bottom:14px}
+.passos li::before{content:counter(p);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:var(--tinta);color:var(--fundo);font:900 16px/34px "Arial Black",Arial,sans-serif;text-align:center}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 14px}
+th,td{border:2px solid var(--tinta);padding:8px 10px;text-align:left;vertical-align:top}
+th{font:900 11.5px/1.2 "Arial Black",Arial,sans-serif;text-transform:uppercase;letter-spacing:.8px}
+td.n{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tabela{overflow-x:auto}
+.ligacoes{list-style:none;padding:0}
+.ligacoes li{border-left:4px solid var(--cor);padding:4px 0 4px 10px;margin-bottom:10px}
+.ligacoes small{display:block;color:var(--suave);font-size:13.5px}
+.aviso{font-size:14px;border:2px dashed var(--tinta);padding:10px 12px;margin:12px 0}
+.campo{margin:12px 0 16px}
+.campo label{display:block;font-weight:700;margin-bottom:6px}
+textarea,input[type=text]{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--tinta);background:var(--papel);color:var(--tinta);border-radius:0}
+textarea{min-height:96px;resize:vertical}
+.acoes{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.btn{min-height:48px;border:2px solid var(--tinta);background:var(--tinta);color:var(--fundo);font:700 14px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.6px;padding:14px 18px;cursor:pointer}
+.btn.sec{background:var(--fundo);color:var(--tinta)}
+.estado{font-size:14px;min-height:20px;margin-top:8px}
+.nota{font-size:13.5px;color:var(--suave)}
+footer{max-width:720px;margin:0 auto;padding:16px 16px 40px;font-size:12.5px;border-top:2px solid var(--tinta)}
+a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--tinta);outline-offset:2px}
+@media (max-width:480px){h1{font-size:27px}.topo .l1{flex-direction:column;gap:6px}}
+@media print{.topo{position:static}.acoes,.topo nav{display:none}}
+</style></head><body>
+<header class="topo"><div class="l1"><a class="marca" href="index.html">Cidadania I · INTP26</a><nav aria-label="Páginas do módulo"><a href="index.html" aria-current=page>Início</a><a href="aula-1.html">Aula 1</a><a href="aula-2.html">Aula 2</a><a href="projeto.html">Projeto</a></nav></div></header>
+<main>
+
+<h1>Ser-se humano</h1>
+<p class="sub">Cidadania e Desenvolvimento · Módulo 1 · investigação e informação · 30 horas</p>
+<p>Neste módulo fazemos duas perguntas ao mesmo tempo: <b>o que é ser humano?</b> e <b>como sabemos o que sabemos?</b> Partimos de filosofia, de arte e de performance, e acabamos com uma investigação vossa, apresentada em cena.</p>
+
+<h2>As aulas</h2>
+<ul class="lista">
+<li><a href="aula-1.html"><b>Aula 1 · O que vemos</b><small>A caverna de Platão · CHIROPTERA, de JR, Damien Jalet e Thomas Bangalter · This is Water, de David Foster Wallace</small></a></li>
+<li><a href="aula-2.html"><b>Aula 2 · O que somos</b><small>Sísifo e Albert Camus · Marina Abramović: Rhythm 0 e The Artist Is Present</small></a></li>
+</ul>
+
+<h2>O projeto</h2>
+<ul class="lista">
+<li><a href="projeto.html"><b>«Pergunta Humana»</b><small>Uma pergunta sobre ser-se humano, investigada a sério e transformada num teatro-documento de 5 a 8 minutos.</small></a></li>
+</ul>
+
+<h2>Como és avaliado</h2>
+<p>Não há testes. Contam quatro trabalhos:</p>
+<div class="tabela"><table>
+<tr><th>Trabalho</th><th>Peso</th></tr>
+<tr><td>Diário de investigação: duas ou três linhas no fim de cada aula</td><td class="n">20%</td></tr>
+<tr><td>Laboratório de verificação: verificar afirmações com fontes</td><td class="n">20%</td></tr>
+<tr><td>Dossiê de investigação do projeto (em grupo, com a tua parte identificada)</td><td class="n">30%</td></tr>
+<tr><td>Teatro-documento: apresentação pública e defesa das escolhas</td><td class="n">30%</td></tr>
+</table></div>
+<p>Contam também a assiduidade, a pontualidade, o trabalho de equipa, o pensamento crítico, a autonomia e o respeito pelas regras. O limite de faltas do módulo é de 6 horas.</p>
+
+<div class="ret"><span class="palavra">Diário</span>Cada aula tem, no fim da página, as perguntas do diário. Podes responder aqui, no telemóvel, e enviar ao professor com o botão «Copiar as minhas respostas».</div>
+
+</main>
+<footer>Cidadania e Desenvolvimento · EPI – Escola Profissional de Imagem · 2026/2027 · turma INTP26. As respostas que escreves aqui ficam guardadas só no teu aparelho.</footer>
+
+</body></html>
