@@ -71,3 +71,10 @@
 
 **Por fazer (professor)**
 - Ligar o GitHub Pages: no repositório, Settings → Pages → «Deploy from a branch» → ramo `claude/cidadania-desenvolvimento-modulos-rv1e4q`, pasta `/docs`. Endereço previsto: https://pedrohfernandes-klk.github.io/CIDADANIA1oANO/
+
+## 2026-10-07 · Site publicado no GitHub Pages
+
+- O Pages não ficou ativo pelas definições. A solução foi publicar o conteúdo de `docs/` num ramo `gh-pages`: o GitHub ativou o Pages sozinho e a publicação («pages build and deployment») terminou com sucesso às 13:51.
+- **Endereço para os alunos: https://pedrohfernandes-klk.github.io/CIDADANIA1oANO/**
+- O ramo `gh-pages` só tem o site dos alunos (4 páginas). Planos, chaves e `_interno` não são publicados.
+- Para atualizar o site: editar `_interno/ferramentas/gerar_site.py` e correr `bash _interno/ferramentas/publicar_site.sh`.

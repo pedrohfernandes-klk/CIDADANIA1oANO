@@ -47,3 +47,8 @@ python3 _interno/ferramentas/gerar_fichas.py CAMINHO/PT_MOD_1_Literatura_Medieva
 ```
 
 O modelo **não** está no repositório, porque tem dados de outra docente e o repositório é público. Descarrega-o do Drive (pasta das fichas de módulo de Português) antes de correr o script.
+
+## Site dos alunos
+
+https://pedrohfernandes-klk.github.io/CIDADANIA1oANO/ (GitHub Pages, ramo `gh-pages`).
+O conteúdo vem de `_interno/ferramentas/gerar_site.py`, que gera `docs/`; `bash _interno/ferramentas/publicar_site.sh` gera e publica.
