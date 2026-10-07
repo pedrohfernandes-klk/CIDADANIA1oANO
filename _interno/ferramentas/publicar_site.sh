@@ -8,7 +8,8 @@ python3 _interno/ferramentas/gerar_site.py
 TMP=$(mktemp -d)
 git fetch -q origin gh-pages
 git worktree add -q "$TMP" origin/gh-pages
-rsync -a --delete --exclude .git docs/ "$TMP"/
+find "$TMP" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+cp -r docs/. "$TMP"/
 cd "$TMP"
 git add -A
 if git diff --cached --quiet; then echo "Site sem alterações."; else
