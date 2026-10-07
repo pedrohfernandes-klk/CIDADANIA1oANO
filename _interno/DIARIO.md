@@ -52,3 +52,12 @@
 - Não consegui ver os diapositivos renderizados (o LibreOffice deste ambiente não abre ficheiros); verifiquei a estrutura, o texto que cabe em cada caixa e uma pré-visualização aproximada.
 - As ligações foram tiradas de resultados de pesquisa; não as consegui abrir uma a uma (a rede deste ambiente bloqueia esses sites).
 - Os HTML da aula 1 ficaram desatualizados em relação ao que foi dado.
+
+## 2026-10-07 · Feed de papel: cartões repetidos
+
+**Problema:** na versão «gostos», o mesmo cartão podia aparecer duas vezes. Havia 4 cartões por tema, mas o tema favorito aparece até 7 vezes em 3 rondas (e até 9 quando o cartão «ao acaso» calhava no mesmo tema); quando o monte acabava, era baralhado e reutilizado.
+
+**Feito**
+- 8 cartões por tema (48 no total), no widget e no anexo do plano para imprimir.
+- O cartão ao acaso vem sempre de outro tema (nem o 1.º nem o 2.º do ranking). Máximo por tema numa sessão: 1 + 3 + 3 = 7 < 8, por isso nenhum cartão se repete.
+- Testado: 10 000 sessões simuladas com o código da página, zero repetições. Regra atualizada no plano, nos diapositivos e no próprio widget.

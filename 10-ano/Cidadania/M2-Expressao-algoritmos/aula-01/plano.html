@@ -84,7 +84,7 @@ button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{
 <tr><td>Diapositivos</td><td><a href="diapositivos.html">diapositivos.html</a>. Atenção ao diapositivo 6: as regras da versão 2 <b>não</b> podem ser vistas pelo segundo utilizador (ver passo 2).</td></tr>
 <tr><td>Ficha do aluno</td><td><a href="ficha.html">ficha.html</a>: no telemóvel ou impressa.</td></tr>
 <tr><td>Feed no ecrã</td><td><a href="feed.html">feed.html</a>: o algoritmo corre sozinho, em 3 rondas, nas duas versões. Projetar ou passar um telemóvel ao utilizador. Substitui os cartões e a contagem no quadro; no fim, mostra a tabela de cada tema, ronda a ronda.</td></tr>
-<tr><td>Cartões (alternativa sem ecrã)</td><td>Imprimir e recortar os 24 cartões do <a href="#anexo">anexo</a> (6 temas × 4). Fazer 6 montes, um por tema, virados para baixo.</td></tr>
+<tr><td>Cartões (alternativa sem ecrã)</td><td>Imprimir e recortar os 48 cartões do <a href="#anexo">anexo</a> (6 temas × 8). Cartões usados não voltam ao monte. Fazer 6 montes, um por tema, virados para baixo.</td></tr>
 <tr><td>Quadro (só com cartões)</td><td>Desenhar uma tabela de registo: 6 colunas (Futebol, Música, Humor, Animais, Teatro, Notícias) e uma linha por ronda.</td></tr>
 <tr><td>Cronómetro (só com cartões)</td><td>O do telemóvel, para a versão 2 (quem regista mede quanto tempo o utilizador olha para cada cartão). Com o <a href="feed.html">feed no ecrã</a>, não é preciso.</td></tr>
 <tr><td>Sala</td><td>Uma cadeira à frente para o utilizador, uma mesa para o algoritmo; o resto da turma em meia-lua. Espaço livre para a linha do passo 5.</td></tr>
@@ -119,7 +119,7 @@ button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{
 <ol>
 <li><b>Ronda 1:</b> o algoritmo mostra 6 cartões, um de cada tema, por ordem ao acaso. O utilizador lê cada um e diz «gosto» aos que quiser.</li>
 <li>O registo soma 1 ponto ao tema de cada cartão com gosto.</li>
-<li><b>Rondas 2 e 3:</b> o algoritmo mostra 6 cartões: <b>3 do tema com mais pontos, 2 do segundo e 1 de um tema ao acaso</b>. Em caso de empate, ganha o tema com o gosto mais recente. Quando um monte acaba, baralha-se e volta a usar-se: nas redes, repetir é normal.</li>
+<li><b>Rondas 2 e 3:</b> o algoritmo mostra 6 cartões: <b>3 do tema com mais pontos, 2 do segundo e 1 de outro tema, ao acaso</b>. Em caso de empate, ganha o tema com o gosto mais recente.</li>
 </ol>
 <p>Ao fim de três rondas, dois ou três temas costumam ter desaparecido do feed. Perguntar ao utilizador, antes de mostrar o quadro: «Quantos temas diferentes achas que viste?»</p>
 
@@ -191,33 +191,57 @@ button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{
 <li>Diário de um feed, dia 1 (conta para os 20% do diário).</li>
 </ul>
 
-<h2 id="anexo" class="quebra">Anexo · 24 cartões do feed de papel</h2>
+<h2 id="anexo" class="quebra">Anexo · 48 cartões do feed de papel</h2>
 <p class="nota nao-imprimir">Imprimir em A4 e recortar pelas linhas tracejadas. Publicações inventadas para a atividade.</p>
 <div class="cartoes">
 <div class="cartao"><b>Futebol</b>Golo aos 90+3. Não há coração que aguente.</div>
 <div class="cartao"><b>Futebol</b>As 10 melhores defesas da semana.</div>
 <div class="cartao"><b>Futebol</b>Treinador explica a derrota: «faltou-nos cabeça».</div>
 <div class="cartao"><b>Futebol</b>Miúda de 12 anos faz chapéu à guarda-redes no torneio da escola.</div>
+<div class="cartao"><b>Futebol</b>Equipa feminina sub-17 apura-se para a final do campeonato.</div>
+<div class="cartao"><b>Futebol</b>Guarda-redes defende três penáltis seguidos.</div>
+<div class="cartao"><b>Futebol</b>Adeptos ficam a limpar a bancada depois do jogo.</div>
+<div class="cartao"><b>Futebol</b>Treino aberto ao público no sábado de manhã.</div>
 <div class="cartao"><b>Música</b>O álbum novo saiu à meia-noite. Já ouviste?</div>
 <div class="cartao"><b>Música</b>Concerto-surpresa numa estação de metro.</div>
 <div class="cartao"><b>Música</b>Como se escreve um refrão que não sai da cabeça.</div>
 <div class="cartao"><b>Música</b>Avó de 80 anos aprende bateria e toca com o neto.</div>
+<div class="cartao"><b>Música</b>Banda de garagem da escola grava o primeiro EP.</div>
+<div class="cartao"><b>Música</b>Festival de verão anuncia os primeiros nomes.</div>
+<div class="cartao"><b>Música</b>Guitarrista acaba o concerto com uma corda partida.</div>
+<div class="cartao"><b>Música</b>Como fazer um beat só com sons da cozinha.</div>
 <div class="cartao"><b>Humor</b>Quando o professor diz «é só uma pergunta rápida».</div>
 <div class="cartao"><b>Humor</b>Tentei seguir a receita. A receita ganhou.</div>
 <div class="cartao"><b>Humor</b>Coisas que só acontecem no grupo da turma.</div>
 <div class="cartao"><b>Humor</b>O meu cão a ouvir a palavra «rua».</div>
+<div class="cartao"><b>Humor</b>Eu a apresentar o trabalho de grupo que fiz sozinho.</div>
+<div class="cartao"><b>Humor</b>Segunda-feira de manhã, resumida num gato.</div>
+<div class="cartao"><b>Humor</b>«Façam grupos de três.» Nós: quatro amigos.</div>
+<div class="cartao"><b>Humor</b>O despertador e eu: uma relação complicada.</div>
 <div class="cartao"><b>Animais</b>Cadela espera pela dona à porta da escola todos os dias.</div>
 <div class="cartao"><b>Animais</b>Os corvos lembram-se de caras humanas durante anos.</div>
 <div class="cartao"><b>Animais</b>Abrigo procura família para doze gatinhos.</div>
 <div class="cartao"><b>Animais</b>Polvo abre um frasco por dentro.</div>
+<div class="cartao"><b>Animais</b>Golfinhos avistados no rio esta manhã.</div>
+<div class="cartao"><b>Animais</b>Gata adota três patinhos órfãos.</div>
+<div class="cartao"><b>Animais</b>Cegonha volta ao mesmo ninho pelo décimo ano.</div>
+<div class="cartao"><b>Animais</b>Ouriço resgatado de uma baliza de futebol.</div>
 <div class="cartao"><b>Teatro</b>Bastidores: três horas de maquilhagem para dois minutos de cena.</div>
 <div class="cartao"><b>Teatro</b>Ator esquece o texto e improvisa. A sala vem abaixo.</div>
 <div class="cartao"><b>Teatro</b>Audições abertas para um musical juvenil.</div>
 <div class="cartao"><b>Teatro</b>Cinco exercícios de voz antes de entrar em cena.</div>
+<div class="cartao"><b>Teatro</b>Peça encenada num elevador, para quatro espetadores de cada vez.</div>
+<div class="cartao"><b>Teatro</b>Escola de teatro abre oficina gratuita de máscaras.</div>
+<div class="cartao"><b>Teatro</b>Atriz de 90 anos regressa ao palco.</div>
+<div class="cartao"><b>Teatro</b>O que fazer quando o pano cai a meio da cena.</div>
 <div class="cartao"><b>Notícias</b>Orçamento participativo jovem: a votação abre amanhã.</div>
 <div class="cartao"><b>Notícias</b>Onda de calor: conselhos para os próximos dias.</div>
 <div class="cartao"><b>Notícias</b>Estudo: jovens dormem menos de sete horas em dias de aulas.</div>
 <div class="cartao"><b>Notícias</b>Eleições para a associação de estudantes: debate na sexta.</div>
+<div class="cartao"><b>Notícias</b>Biblioteca municipal passa a abrir ao domingo.</div>
+<div class="cartao"><b>Notícias</b>Nova ciclovia liga a escola à estação.</div>
+<div class="cartao"><b>Notícias</b>Consulta pública sobre o novo parque da cidade.</div>
+<div class="cartao"><b>Notícias</b>Greve dos comboios marcada para quinta-feira.</div>
 </div>
 
 <details><summary>Fontes e referências</summary>
