@@ -31,3 +31,12 @@
 **Feito**
 - `M2-Expressao-algoritmos/aula-01/feed.html`: o algoritmo do «feed de papel» corre no ecrã (projetor ou telemóvel). 3 rondas de 6 cartões; versão 1 (gostos) e versão 2 (tempo de leitura medido em segredo). No fim, revela a regra e a tabela de cada tema, ronda a ronda, com os temas que desapareceram. Não guarda nem envia dados.
 - A atividade passou a ter 3 rondas nas duas versões: plano, diapositivos e ficha do aluno atualizados. Os cartões em papel ficam como alternativa sem ecrã.
+
+## 2026-10-07 · Páginas que não abriam
+
+**Problema:** as páginas HTML dependiam de ficheiros partilhados (`terra-firme.css`, `diapositivos.css/.js`, `ficha.js`). Abertas sozinhas (descarregadas, enviadas, no telemóvel) ficavam sem estilo e sem funcionamento; o widget do feed ficava em branco. No GitHub só se vê o código. Além disso, `confirm()` e `window.print()` não funcionam dentro do visualizador de artefactos.
+
+**Feito**
+- Cada página passou a ser autónoma (CSS e JavaScript dentro do ficheiro); os ficheiros partilhados foram apagados.
+- «Sair» (widget) e «Apagar respostas» (fichas) passaram a pedir um segundo toque, em vez de `confirm()`. O botão de imprimir esconde-se quando a página está embutida.
+- Publicado um artefacto privado com as 7 páginas: https://claude.ai/artifact/6pJxKPQAgrEiCJCe2KR6Fh (para os alunos o abrirem, é preciso partilhá-lo no menu Partilhar).

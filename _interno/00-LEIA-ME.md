@@ -6,7 +6,8 @@ Repositório de trabalho da disciplina de Cidadania e Desenvolvimento, turma **I
 
 1. Ler este ficheiro.
 2. Ler `01-sistema/`: `VOZ.md`, `PLANO.md`, `HORARIO.md`, `TEMPOS.md` e `CALENDARIO.md`.
-3. Criar o material na pasta do módulo (`10-ano/Cidadania/…`), com a identidade visual Terra Firme (`10-ano/Cidadania/terra-firme.css`).
+3. Criar o material na pasta do módulo (`10-ano/Cidadania/…`), com a identidade visual Terra Firme. **Cada página HTML é autónoma**: CSS e JavaScript ficam dentro do próprio ficheiro, para abrir sozinha no telemóvel, no Drive ou num artefacto. Partir de uma página existente.
+   - Não usar `confirm()`, `alert()` nem `window.print()` sem alternativa: não funcionam dentro do visualizador de artefactos.
 4. Acrescentá-lo ao índice (`INDICE-MATERIAIS.md` e `10-ano/Cidadania/index.html`).
 5. Registar no `DIARIO.md` o que foi feito e o que ficou por decidir.
 
@@ -31,9 +32,6 @@ _interno/
   ferramentas/             gerador das fichas de módulo (.docx)
 10-ano/Cidadania/
   index.html               índice público dos materiais
-  terra-firme.css          identidade visual partilhada
-  diapositivos.css/.js     motor dos diapositivos
-  ficha.js                 gravação local das respostas das fichas
   Fichas de modulo/        fichas de módulo oficiais (.docx)
   M1-Ser-se-humano/aula-NN/            plano.html · diapositivos.html · ficha.html
   M2-Expressao-algoritmos/aula-NN/     idem

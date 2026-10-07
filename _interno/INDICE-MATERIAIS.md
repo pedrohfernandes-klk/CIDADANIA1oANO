@@ -22,9 +22,8 @@ Caminhos relativos a `10-ano/Cidadania/`.
 
 ## Peças partilhadas
 
+Não há: cada página HTML é autónoma (CSS e JavaScript no próprio ficheiro).
+
 | Ficheiro | Para quê |
 |---|---|
-| `10-ano/Cidadania/terra-firme.css` | identidade visual Terra Firme |
-| `10-ano/Cidadania/diapositivos.css` + `diapositivos.js` | diapositivos: setas, toque, «F» ecrã inteiro, cronómetros, impressão |
-| `10-ano/Cidadania/ficha.js` | fichas: grava as respostas no aparelho do aluno, imprime |
 | `_interno/ferramentas/gerar_fichas.py` + `fichas_conteudo.py` | gera as fichas de módulo a partir do modelo da escola |
