@@ -16,6 +16,8 @@ Versão pública (para os alunos): `10-ano/Cidadania/index.html`.
 | M1 | 1 | O que nos torna humanos? | 100 min (versão de 50) | `M1-Ser-se-humano/aula-01/plano.html` | `…/diapositivos.html` (18) | `…/ficha.html` |
 | M2 | 1 | Quem escolheu o que viste hoje? | 100 min (versão de 50) | `M2-Expressao-algoritmos/aula-01/plano.html` | `…/diapositivos.html` (17) | `…/ficha.html` |
 
+Widget da aula 1 de M2: `M2-Expressao-algoritmos/aula-01/feed.html`, o «feed de papel» no ecrã (3 rondas; versão 1 gostos, versão 2 atenção). Substitui os cartões e a contagem no quadro; os cartões em papel continuam no anexo do plano.
+
 Caminhos relativos a `10-ano/Cidadania/`.
 
 ## Peças partilhadas

@@ -25,3 +25,9 @@
 
 **Nota**
 - O PDF «MM26» do Drive é o processo individual dos alunos (dados pessoais). Não foi usado nem copiado para aqui.
+
+## 2026-10-07 · Widget do feed de papel (M2, aula 1)
+
+**Feito**
+- `M2-Expressao-algoritmos/aula-01/feed.html`: o algoritmo do «feed de papel» corre no ecrã (projetor ou telemóvel). 3 rondas de 6 cartões; versão 1 (gostos) e versão 2 (tempo de leitura medido em segredo). No fim, revela a regra e a tabela de cada tema, ronda a ronda, com os temas que desapareceram. Não guarda nem envia dados.
+- A atividade passou a ter 3 rondas nas duas versões: plano, diapositivos e ficha do aluno atualizados. Os cartões em papel ficam como alternativa sem ecrã.

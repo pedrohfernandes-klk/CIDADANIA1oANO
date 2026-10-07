@@ -30,9 +30,10 @@
 <tr><th>O quê</th><th>Notas</th></tr>
 <tr><td>Diapositivos</td><td><a href="diapositivos.html">diapositivos.html</a>. Atenção ao diapositivo 6: as regras da versão 2 <b>não</b> podem ser vistas pelo segundo utilizador (ver passo 2).</td></tr>
 <tr><td>Ficha do aluno</td><td><a href="ficha.html">ficha.html</a>: no telemóvel ou impressa.</td></tr>
-<tr><td>Cartões</td><td>Imprimir e recortar os 24 cartões do <a href="#anexo">anexo</a> (6 temas × 4). Fazer 6 montes, um por tema, virados para baixo.</td></tr>
-<tr><td>Quadro</td><td>Desenhar uma tabela de registo: 6 colunas (Futebol, Música, Humor, Animais, Teatro, Notícias) e uma linha por ronda.</td></tr>
-<tr><td>Cronómetro</td><td>O do telemóvel, para a versão 2 (quem regista mede quanto tempo o utilizador olha para cada cartão).</td></tr>
+<tr><td>Feed no ecrã</td><td><a href="feed.html">feed.html</a>: o algoritmo corre sozinho, em 3 rondas, nas duas versões. Projetar ou passar um telemóvel ao utilizador. Substitui os cartões e a contagem no quadro; no fim, mostra a tabela de cada tema, ronda a ronda.</td></tr>
+<tr><td>Cartões (alternativa sem ecrã)</td><td>Imprimir e recortar os 24 cartões do <a href="#anexo">anexo</a> (6 temas × 4). Fazer 6 montes, um por tema, virados para baixo.</td></tr>
+<tr><td>Quadro (só com cartões)</td><td>Desenhar uma tabela de registo: 6 colunas (Futebol, Música, Humor, Animais, Teatro, Notícias) e uma linha por ronda.</td></tr>
+<tr><td>Cronómetro (só com cartões)</td><td>O do telemóvel, para a versão 2 (quem regista mede quanto tempo o utilizador olha para cada cartão). Com o <a href="feed.html">feed no ecrã</a>, não é preciso.</td></tr>
 <tr><td>Sala</td><td>Uma cadeira à frente para o utilizador, uma mesa para o algoritmo; o resto da turma em meia-lua. Espaço livre para a linha do passo 5.</td></tr>
 </table>
 
@@ -40,7 +41,7 @@
 <table>
 <tr><th>Min</th><th>Momento</th><th>O que acontece</th><th>Diap.</th></tr>
 <tr><td class="t">0–5</td><td>Mesa</td><td>«Qual foi a primeira coisa que viste no telemóvel hoje? Quem a escolheu?»</td><td>2</td></tr>
-<tr><td class="t">5–20</td><td>Feed de papel, v1</td><td>Um utilizador, um algoritmo que conta gostos, quatro rondas.</td><td>3–5</td></tr>
+<tr><td class="t">5–20</td><td>Feed de papel, v1</td><td>Um utilizador, um algoritmo que conta gostos, três rondas.</td><td>3–5</td></tr>
 <tr><td class="t">20–33</td><td>Feed de papel, v2</td><td>Outro utilizador; o algoritmo mede o tempo de atenção e ele não sabe.</td><td>6</td></tr>
 <tr><td class="t">33–50</td><td>Mural e nomes</td><td>O que aconteceu? Entrada, regras, saída; personalização; bolha.</td><td>7–8</td></tr>
 <tr><td colspan="4" class="corte" style="border-left:0;border-right:0">Corte possível: fim do 1.º tempo (ver «Versão de 50 minutos»)</td></tr>
@@ -60,16 +61,22 @@
 <h3>2 · Feed de papel · 28 min, duas versões</h3>
 <p><b>Papéis (diapositivo 3):</b> 1 <b>utilizador</b> (na cadeira), 1 <b>algoritmo</b> (escolhe e mostra os cartões), 1 <b>registo</b> (preenche a tabela do quadro), os restantes são <b>observadores</b> e preenchem a tabela da ficha.</p>
 
+<div class="ret"><span class="palavra">Com o feed no ecrã</span>Abrir <a href="feed.html">feed.html</a> e escolher a versão <b>antes</b> de o utilizador estar a ver. O utilizador só toca em «Gosto» (versão 1) ou em «Seguinte» (versão 2); a escolha dos cartões, a contagem e, na versão 2, a cronometragem secreta são feitas pelo ecrã. O papel de «algoritmo» passa a ser o de quem lê os cartões em voz alta para a turma, e o «registo» compara no fim a tabela do ecrã com a dos observadores. Sem ecrã, seguir as regras abaixo com os cartões de papel.</div>
 <p><b>Versão 1: gostos (diapositivo 4), cerca de 15 min.</b></p>
 <ol>
 <li><b>Ronda 1:</b> o algoritmo mostra 6 cartões, um de cada tema, por ordem ao acaso. O utilizador lê cada um e diz «gosto» aos que quiser.</li>
 <li>O registo soma 1 ponto ao tema de cada cartão com gosto.</li>
-<li><b>Rondas 2, 3 e 4:</b> o algoritmo mostra 6 cartões: <b>3 do tema com mais pontos, 2 do segundo e 1 de um tema ao acaso</b>. Em caso de empate, ganha o tema com o gosto mais recente. Quando um monte acaba, baralha-se e volta a usar-se: nas redes, repetir é normal.</li>
+<li><b>Rondas 2 e 3:</b> o algoritmo mostra 6 cartões: <b>3 do tema com mais pontos, 2 do segundo e 1 de um tema ao acaso</b>. Em caso de empate, ganha o tema com o gosto mais recente. Quando um monte acaba, baralha-se e volta a usar-se: nas redes, repetir é normal.</li>
 </ol>
-<p>Ao fim de quatro rondas, dois ou três temas desapareceram do feed. Perguntar ao utilizador, antes de mostrar o quadro: «Quantos temas diferentes achas que viste?»</p>
+<p>Ao fim de três rondas, dois ou três temas costumam ter desaparecido do feed. Perguntar ao utilizador, antes de mostrar o quadro: «Quantos temas diferentes achas que viste?»</p>
 
-<p><b>Versão 2: atenção (diapositivo 6), cerca de 13 min.</b> Escolher outro utilizador e <b>pedir-lhe que saia da sala um minuto</b>. Com ele fora, mostrar o diapositivo 6: agora o algoritmo não conta gostos. O utilizador segura cada cartão o tempo que quiser e o registo cronometra, às escondidas, quantos segundos ele fica em cada um. O tema com mais segundos ganha a ronda seguinte (mesma regra 3–2–1). Voltar ao diapositivo 5 antes de o utilizador entrar. Dizer-lhe só: «Lê os cartões com calma. Não precisas de fazer mais nada.»</p>
-<p>Três rondas chegam. No fim, perguntar ao segundo utilizador: «Escolheste alguma coisa?» Depois revelar a regra. A versão 2 é a mais próxima das plataformas reais, que medem visualizações, tempo de visualização, partilhas e comentários, e não só gostos.</p>
+<p><b>Versão 2: atenção (diapositivo 6), cerca de 13 min.</b> Escolher outro utilizador e <b>pedir-lhe que saia da sala um minuto</b>. Com ele fora, explicar à turma a regra nova (diapositivo 6): agora o algoritmo não conta gostos, mede quantos segundos o utilizador fica em cada cartão, e o tema com mais segundos ganha a ronda seguinte (mesma regra 3–2–1).</p>
+<ul>
+<li><b>Com o feed no ecrã:</b> escolher a versão 2 em <a href="feed.html">feed.html</a> antes de o utilizador entrar. Os cartões aparecem um a um e ele toca em «Seguinte» quando quiser; o ecrã cronometra em segredo.</li>
+<li><b>Com cartões:</b> o utilizador segura cada cartão o tempo que quiser e o registo cronometra, às escondidas. Voltar ao diapositivo 5 antes de o utilizador entrar.</li>
+</ul>
+<p>Dizer-lhe só: «Lê os cartões com calma. Não precisas de fazer mais nada.»</p>
+<p>Também três rondas. No fim, perguntar ao segundo utilizador: «Escolheste alguma coisa?» Depois revelar a regra. A versão 2 é a mais próxima das plataformas reais, que medem visualizações, tempo de visualização, partilhas e comentários, e não só gostos.</p>
 
 <h3>3 · Mural e nomes · 17 min</h3>
 <p>Diapositivo 7. Perguntas, por esta ordem:</p>
