@@ -47,7 +47,7 @@ function run(file,fault=false,branch=0){
   clickText(ri+1===cfg.rounds.length&&type!=='match'?'Concluir':'Continuar');
  }
  assert(context.window.CidadaniaExercise.getState().finished,file+' não terminou');
- if(!fault)assert.equal(records['epi-cd-m1-v1-'+cfg.id],'explorado');
+ if(!fault)assert.equal(records['epi-cd-m1-v2-'+cfg.id],'explorado');
  ids.reiniciar.click();assert.equal(context.window.CidadaniaExercise.getState().round,0);assert(!context.window.CidadaniaExercise.getState().finished);
  total++;
 }

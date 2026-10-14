@@ -1,5 +1,9 @@
 """Conteúdos originais do percurso. As situações inventadas são identificadas."""
 SOURCES={
+ 'kaneorig':('Paines Plough · criação e estreia de Crave, 1998','https://painesplough.com/productions/crave/'),
+ 'strasberg':('Lee Strasberg Institute · o Método e a formação do ator','https://strasberg.edu/about/what-is-method-acting/'),
+ 'sisifo':('Museo del Prado · Sísifo, de Ticiano','https://www.museodelprado.es/en/the-collection/art-work/sisyphus/bb56eb47-052f-4e15-8e46-75a3f18b13ad'),
+ 'vermeer':('Museus de Dresden · restauro de Vermeer','https://vermeer.skd.museum/en/'),
  'direitos':('ONU / UNRIC · Declaração Universal dos Direitos Humanos','https://unric.org/pt/declaracao-universal-dos-direitos-humanos/'),
  'egg':('Andy Weir · The Egg · original em inglês','https://galactanet.com/oneoff/theegg_mod.html'),
  'shakespeare':('Folger Shakespeare Library · O Mercador de Veneza · III, 1','https://www.folger.edu/explore/shakespeares-works/the-merchant-of-venice/read/3/1/'),
@@ -19,7 +23,7 @@ def quiz(title,scene,question,options,correct,feedback,type='classify'):
  return dict(title=title,scene=scene,question=question,options=options,correct=correct,feedback=feedback,type=type)
 
 STEPS=[
-dict(id='01',title='Uma vida em direto',subtitle='The Truman Show entra aqui.',type='perspective',icon='camera',refs=['direitos'],
+dict(id='01',title='Uma vida em direto',subtitle='The Truman Show · liberdade e controlo.',type='perspective',icon='camera',refs=['direitos'],
  intro='Vê o filme na aula. Depois, abre as posições. Truman acredita viver uma vida comum; o programa organiza aquilo que ele pode conhecer e escolher.',
  aim='Reconhecer o que cada interveniente sabe, o poder de que dispõe e a responsabilidade que assume.',
  previous='As páginas «O que vemos» e «O que somos» ajudam a recuperar a caverna, CHIROPTERA, Sísifo e Abramović.',
