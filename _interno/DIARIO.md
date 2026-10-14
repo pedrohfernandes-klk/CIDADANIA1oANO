@@ -78,3 +78,9 @@
 - **Endereço para os alunos: https://pedrohfernandes-klk.github.io/CIDADANIA1oANO/**
 - O ramo `gh-pages` só tem o site dos alunos (4 páginas). Planos, chaves e `_interno` não são publicados.
 - Para atualizar o site: editar `_interno/ferramentas/gerar_site.py` e correr `bash _interno/ferramentas/publicar_site.sh`.
+
+## 14/10/2026 — Dez passos, dois filmes, dois ensaios
+
+Criado o novo percurso M1, com CSS atual de Português, logótipo EPI e fichas autónomas. Truman entra no início; Doze Homens em Fúria entra depois do primeiro ensaio. Integrados os PDFs de Truman e as aulas anteriores. Acrescentados guião, ficha e guia do segundo ensaio. As atividades interativas não têm campos de escrita; trabalham escolhas, evidências, perspetivas e revisão. A nova entrada conserva a anterior em arquivo. Publicador preparado para regenerar o percurso. A ficha oficial mantém-se; a grelha dos ensaios é uma proposta.
+
+Verificação: 40 percursos do motor, incluindo recomeços e armazenamento indisponível; 17 páginas e ligações locais; PDFs renderizados e revistos. Sem teste em navegador real, por indisponibilidade da capacidade exigida no ambiente. Preparado para revisão num PR; publicação não executada.

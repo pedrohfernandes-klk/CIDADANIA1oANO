@@ -37,3 +37,10 @@ Não há: cada página HTML é autónoma (CSS e JavaScript no próprio ficheiro)
 | Ficheiro | Para quê |
 |---|---|
 | `_interno/ferramentas/gerar_fichas.py` + `fichas_conteudo.py` | gera as fichas de módulo a partir do modelo da escola |
+
+## Percurso interativo — Módulo 1 (14/10/2026)
+
+- [Entrada dos alunos](../docs/m1/index.html): dez passos, 23 rondas, dois filmes e dois ensaios.
+- [Guião 1](../docs/m1/guiao-1.html) e [Ensaio 1](../docs/m1/ensaio-1.html): Truman, materiais anteriores integrados.
+- [Guião 2](../docs/m1/guiao-2.html) e [Ensaio 2](../docs/m1/ensaio-2.html): Doze Homens em Fúria.
+- [Professor](m1/professor.html) e [notas do percurso](m1/LEIA-ME.md).
