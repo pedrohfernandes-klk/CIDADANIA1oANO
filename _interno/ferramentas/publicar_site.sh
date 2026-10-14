@@ -5,6 +5,7 @@
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
 python3 _interno/ferramentas/gerar_site.py
+python3 _interno/ferramentas/gerar_percurso_m1.py
 TMP=$(mktemp -d)
 git fetch -q origin gh-pages
 git worktree add -q "$TMP" origin/gh-pages
