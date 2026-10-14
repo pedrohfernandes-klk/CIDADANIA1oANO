@@ -1,6 +1,9 @@
 from pathlib import Path
 import json,re,html,base64,shutil
 from m1_conteudos import STEPS,SOURCES
+from m1_aprofundamento import enrich
+from m1_paginas_contexto import step_page,index_page,write_support
+STEPS=enrich(STEPS)
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'docs'/'m1'
 OUT.mkdir(parents=True,exist_ok=True)
@@ -20,6 +23,8 @@ CSS+='''
 @media print{body{background:#fff;color:#000}.pg{max-width:none;padding:0}.nao-imprimir,.barra,button{display:none!important}.p-cab{break-after:avoid}.passo,.materiais{break-inside:avoid}.campo-papel{min-height:110px}.quebra{break-before:page}a{color:#000}details{display:block}details>*{display:block!important}}
 '''
 
+CSS+='\n'+(Path(__file__).parent/'cidadania-contexto.css').read_text()
+READING_JS=(Path(__file__).parent/'cidadania-contexto.js').read_text()
 logo=[]
 for n in ['epi-logo','epi-name']:
  s=(ASSETS/f'{n}.svg').read_text();logo.append(re.search(r'<g>([\s\S]*?)</g>',s)[1])
@@ -52,15 +57,14 @@ for i,step in enumerate(STEPS):
  if i==5:essays='<section class="materiais"><h2>Segundo filme</h2><a href="guiao-2.html">Guião de investigação · Doze Homens em Fúria</a></section>'
  if i==9:essays='<section class="materiais"><h2>Segundo ensaio</h2><a href="guiao-2.html">Abrir o guião</a><a href="ensaio-2.html">Abrir a ficha «Decidir sobre o outro»</a></section>'
  data=json.dumps(step,ensure_ascii=False).replace('</','<\\/')
- body=head(step['title'],step['subtitle'])+icon(step['icon'])+f'<section class="exercicio"><div id="atividade"></div><aside class="feedback" id="feedback" role="status" aria-live="polite" hidden></aside></section><noscript><p>Ativa o JavaScript para usar as escolhas interativas. Os materiais e as fontes continuam disponíveis abaixo.</p></noscript><div class="barra nao-imprimir"><span id="estado">Por explorar</span><button class="c-sec" id="reiniciar" type="button">Recomeçar</button></div><details><summary>Antes de explorar</summary><p>{step["intro"]}</p><p>{step["aim"]}</p></details><details><summary>Fontes e ligações</summary>{refs(step["refs"])}</details>'+essays+f'<nav class="barra"><a class="c-sec" href="{previous}">← Voltar</a><a class="c-prim" href="{following}">'+('Próximo passo →' if i<9 else 'Ir para o segundo ensaio →')+'</a></nav>'
- script=f'<script type="application/json" id="dados">{data}</script><script>{JS}</script>'
+ body=step_page(step,head,refs,essays)
+ script=f'<script type="application/json" id="dados">{data}</script><script>{JS}</script><script>{READING_JS}</script>'
  (OUT/f'passo-{step["id"]}.html').write_text(shell(step['title'],body,script))
 
-cards=''.join(f'<a class="passo" href="passo-{s["id"]}.html"><span class="n">{s["id"]}</span>{icon(s["icon"])}<b>{s["title"]}</b><p>{s["subtitle"]}</p><span class="badge" data-progresso="{s["id"]}">Por explorar</span></a>' for s in STEPS)
-body=head('Ser-se humano','Quem conta como pessoa — e quem decide?',back='../index.html')+'<p class="p-lead">Direitos humanos e democracia · dez passos · dois filmes · dois ensaios.</p><p class="ler">Começa com <i>The Truman Show</i>. Recupera as obras que já estudámos, investiga as escolhas de quem atua e decide e regressa à escrita com uma posição fundamentada.</p><nav class="passos" aria-label="Dez passos do módulo">'+cards+'</nav>'
-body+='''<section class="materiais"><h2>Investigar e escrever</h2><a href="guiao-1.html">Guião 1 · Preparar o trabalho sobre Truman</a><a href="ensaio-1.html">Ficha 1 · A quem pertence a vida de Truman?</a><a href="guiao-2.html">Guião 2 · Preparar Doze Homens em Fúria</a><a href="ensaio-2.html">Ficha 2 · Decidir sobre o outro</a></section><section class="materiais"><h2>O que já trabalhámos</h2><a href="../aula-1.html">O que vemos · Platão, CHIROPTERA e This is Water</a><a href="../aula-2.html">O que somos · Sísifo e Abramović</a><a href="../projeto.html">Pergunta Humana · materiais do projeto anterior</a><a href="anteriores/ficha-cd1.html">Primeira ficha de Cidadania · dignidade e investigação</a></section><details><summary>Como usar</summary><p>Escolhe, associa, abre pistas e compara posições. A justificação é feita oralmente. Usa os guiões e as fichas próprias para investigar e escrever os ensaios.</p><p>O estado «Explorado» fica apenas neste aparelho e não é uma nota. Não precisas de criar uma conta. O professor pode usar a página no projetor e a turma responder em papel e no debate.</p></details>'''
-script='''<script>document.querySelectorAll('[data-progresso]').forEach(el=>{try{if(localStorage.getItem('epi-cd-m1-v1-'+el.dataset.progresso)==='explorado')el.textContent='Explorado';}catch{}});</script>'''
+body=index_page(STEPS,head)
+script='''<script>document.querySelectorAll('[data-progresso]').forEach(el=>{try{if(localStorage.getItem('epi-cd-m1-v2-'+el.dataset.progresso)==='explorado')el.textContent='Explorado';}catch{}});</script>'''
 (OUT/'index.html').write_text(shell('Ser-se humano',body,script))
+write_support(OUT,shell,head)
 
 GUIAO2='''<p>Vê <i>Doze Homens em Fúria</i>, de Sidney Lumet (1957), na aula. Observa como as personagens falam, escutam, ocupam o espaço e alteram — ou mantêm — as suas posições.</p><h2>Escolhe dois caminhos de investigação</h2><ol><li><b>Prova e interpretação.</b> O que é apresentado como evidência? Que conclusões ultrapassam aquilo que se pode demonstrar?</li><li><b>Preconceito e igualdade.</b> Que ideias sobre a origem ou a pertença de uma pessoa influenciam a decisão?</li><li><b>Maioria e discordância.</b> Quando é que discordar ajuda o grupo a decidir melhor?</li><li><b>Ator e personagem.</b> Escolhe uma personagem: que objetivo procura, que ação usa e o que muda quando encontra resistência? Relaciona com Stanislavski e o trabalho do Actors Studio.</li><li><b>A pessoa ausente.</b> Quem é discutido sem estar na sala? Relaciona com Truman, Sylvia e a pergunta «quem nunca fala?».</li><li><b>Autoridade e responsabilidade.</b> Relaciona uma decisão do filme com Pinter, Tchékhov ou Abramović. Explica também uma diferença entre as situações.</li></ol><h2>Reúne para a próxima aula</h2><p>Duas fontes identificadas; uma cena de cada filme; uma ligação a outra referência estudada; uma objeção à tua posição; uma pergunta de investigação.</p><p>Regista por palavras tuas, em papel. Identifica autor ou instituição, título e ligação de cada fonte. Separa o que observaste da tua interpretação.</p><h2>Atenção ao contexto</h2><p>O filme apresenta um júri dos Estados Unidos. A análise centra-se na evidência, na igualdade e na responsabilidade de decidir; não serve como descrição do sistema judicial português. Distingue presunção de inocência de certeza sobre o que aconteceu.</p>'''
 (OUT/'guiao-2.html').write_text(shell('Guião de investigação · Segundo filme',head('Antes de decidir','Doze Homens em Fúria · guião de investigação')+'<article class="apoio">'+GUIAO2+'</article><section class="materiais"><h2>Fontes de partida</h2>'+refs(['filme2','direitos','studio','pinter','kane'])+'<a href="materiais/Doze_Homens_Guiao_Investigacao.pdf">Descarregar o guião em PDF</a></section>'))
@@ -81,10 +85,21 @@ body=body.replace('href="index.html"','href="../../docs/m1/index.html"').replace
 legacy=OUT/'anteriores';legacy.mkdir(exist_ok=True)
 shutil.copy2(ROOT/'10-ano/Cidadania/M1-Ser-se-humano/aula-01/ficha.html',legacy/'ficha-cd1.html')
 
+# Apoios de leitura nas fichas e nos guiões: o contexto fica a um clique.
+for name in ['guiao-1.html','guiao-2.html','ensaio-1.html','ensaio-2.html']:
+ file=OUT/name;page=file.read_text()
+ if name.endswith('1.html'):
+  support='<section class="materiais"><h2>Antes de começar</h2><p>Se ainda não conheces bem o filme, começa pelo passo 1. Lê a apresentação das personagens e procura uma ação concreta que permita discutir a liberdade.</p><a href="passo-01.html#conhecer">Conhecer Truman e o programa</a><a href="passo-03.html#perceber">Dignidade, empatia e igualdade</a></section>'
+ else:
+  support='<section class="materiais"><h2>Antes de começar</h2><p>Começa pela apresentação do segundo filme. Distingue a informação disponível, a interpretação dos jurados e a decisão que precisam de tomar.</p><a href="passo-06.html#conhecer">Conhecer Doze Homens em Fúria</a><a href="passo-09.html#perceber">Maioria, deliberação e preconceito</a></section>'
+ support+='<section class="materiais"><h2>Quando uma palavra ou uma ligação é difícil</h2><a href="glossario.html">Palavras explicadas com exemplos</a><a href="oficina-ensaio.html">Construir uma tese, um argumento e uma objeção</a><a href="revisao.html">Rever relações entre as obras</a></section>'
+ page=page.replace('</header>','</header>'+support,1);file.write_text(page)
+
 # A nova entrada usa a identidade atual; a entrada anterior fica arquivada.
 index=ROOT/'docs/index.html';archive=ROOT/'docs/arquivo-m1.html'
 if not archive.exists():shutil.copy2(index,archive)
 landing=head('Cidadania e Desenvolvimento','Quem fala, de quem se fala, quem nunca fala?',back='m1/index.html')+ '<p class="p-lead">EPI · Interpretação — Ator/atriz · INTP26 · 2026/2027</p><section class="materiais"><h2>Módulo 1 · Ser-se humano</h2><p>Direitos humanos e democracia. Dez passos, dois filmes e dois ensaios.</p><a class="c-prim" href="m1/index.html">Entrar no percurso →</a></section><section class="materiais"><h2>Preparar a próxima aula</h2><a href="m1/guiao-1.html">Truman · guião de investigação</a><a href="m1/guiao-2.html">Doze Homens em Fúria · guião de investigação</a></section><section class="materiais"><h2>O que já fizemos</h2><a href="aula-1.html">O que vemos · caverna e CHIROPTERA</a><a href="aula-2.html">O que somos · Sísifo e Abramović</a><a href="arquivo-m1.html">Materiais do percurso anterior</a></section>'
+landing+='<section class="materiais"><h2>Compreender e preparar os ensaios</h2><a href="m1/glossario.html">Palavras explicadas com exemplos</a><a href="m1/revisao.html">Rever relações entre as obras</a><a href="m1/oficina-ensaio.html">Do exemplo ao argumento</a></section>'
 index.write_text(shell('Cidadania e Desenvolvimento',landing))
 index=ROOT/'10-ano/Cidadania/index.html';s=index.read_text()
 if '../../docs/m1/index.html' not in s:

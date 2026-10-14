@@ -84,3 +84,7 @@
 Criado o novo percurso M1, com CSS atual de Português, logótipo EPI e fichas autónomas. Truman entra no início; Doze Homens em Fúria entra depois do primeiro ensaio. Integrados os PDFs de Truman e as aulas anteriores. Acrescentados guião, ficha e guia do segundo ensaio. As atividades interativas não têm campos de escrita; trabalham escolhas, evidências, perspetivas e revisão. A nova entrada conserva a anterior em arquivo. Publicador preparado para regenerar o percurso. A ficha oficial mantém-se; a grelha dos ensaios é uma proposta.
 
 Verificação: 40 percursos do motor, incluindo recomeços e armazenamento indisponível; 17 páginas e ligações locais; PDFs renderizados e revistos. Sem teste em navegador real, por indisponibilidade da capacidade exigida no ambiente. Preparado para revisão num PR; publicação não executada.
+
+## 14/10/2026 — Contexto, Gestalt e três formas de uso
+
+Revisão pedida pelo professor após utilização da primeira versão: contexto de entrada para alunos do 10.º ano, linguagem acessível sem infantilização, ligações explícitas entre obras e cidadania. Adicionados seis momentos por passo, três modos, vocabulário com exemplos, leitura de oito imagens de domínio público, trinta propostas orais e oficina dos ensaios. A sequência passa a 43 rondas. As imagens têm registos de origem e direitos. A revisão mantém os dois ensaios e as atividades sem escrita. Ver decisões e verificação em m1/DESIGN-E-CONTEXTO.md.

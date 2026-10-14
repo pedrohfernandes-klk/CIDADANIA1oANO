@@ -10,7 +10,7 @@ Cada ficha nova é um HTML autónomo: estilos, fonte Bebas Neue, logótipo e Jav
 - Dez passos, com uma proposta de três horas por passo: visionamento, leitura, investigação, debate e escrita. Total: 30 horas.
 - The Truman Show entra no passo 1; Ensaio 1 no passo 5 (250–350 palavras).
 - Doze Homens em Fúria (Sidney Lumet, 1957) entra no passo 6; Ensaio 2 no passo 10 (400–600 palavras).
-- Dez fichas interativas, com 23 rondas. Não há campos de produção textual nas fichas novas. A justificação é oral; a investigação e os ensaios ficam em papel ou no formato indicado pelo professor.
+- Dez fichas interativas, com 43 rondas. Não há campos de produção textual nas fichas novas. A justificação é oral; a investigação e os ensaios ficam em papel ou no formato indicado pelo professor.
 - Guiões e fichas HTML/PDF na pasta `docs/m1/`; respostas e orientações do professor nesta pasta interna.
 - As aulas anteriores estão ligadas ao novo percurso. A antiga entrada está em `docs/arquivo-m1.html`.
 
@@ -41,3 +41,7 @@ A ficha oficial do módulo foi conservada. O percurso e a grelha dos dois ensaio
 ## Verificação
 
 O teste do motor percorre todas as fichas e as três alternativas nas decisões abertas, verifica tentativas erradas, reinício e armazenamento indisponível. É um teste de DOM mínimo, não um teste num navegador real. Neste ambiente não estava disponível a capacidade de controlo de navegador exigida pelo fluxo Sites; por isso não foi iniciada uma pré-visualização de navegador. Os PDFs foram renderizados e inspecionados visualmente.
+
+## Revisão de contexto e Gestalt
+
+O percurso tem agora contexto em seis momentos por passo, três modos de uso, glossário, revisão e oficina dos ensaios. Ver [DESIGN-E-CONTEXTO.md](DESIGN-E-CONTEXTO.md). As oito imagens de domínio público e a sua proveniência estão em `docs/m1/imagens/creditos.json`.

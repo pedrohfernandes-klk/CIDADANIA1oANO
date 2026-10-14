@@ -5,11 +5,11 @@
   if(!root)return;
   const cfg=JSON.parse(document.getElementById('dados').textContent);
   let round=0,selected=[],finished=false;
-  const key='epi-cd-m1-v1-'+cfg.id;
+  const key='epi-cd-m1-v2-'+cfg.id;
   const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
   const button=(text,fn,cls='opcao')=>{const b=el('button',text,cls);b.type='button';b.addEventListener('click',fn);return b;};
   const feedback=document.getElementById('feedback');
-  const announce=text=>{feedback.replaceChildren(el('p',text));feedback.hidden=false;};
+  const announce=text=>{feedback.replaceChildren(el('p','O que esta escolha permite perceber','feedback-title'),el('p',text));feedback.hidden=false;if(![...root.children].includes(feedback))root.append(feedback);};
   const save=value=>{try{localStorage.setItem(key,value);}catch{};};
   const clear=()=>{root.replaceChildren();feedback.hidden=true;feedback.replaceChildren();selected=[];};
   function finish(){
@@ -22,12 +22,12 @@
   function next(){round++;if(round>=cfg.rounds.length)finish();else render();}
   function after(text){announce(text);root.querySelectorAll('button').forEach(b=>b.disabled=true);root.append(button(round+1===cfg.rounds.length?'Concluir':'Continuar',next,'c-prim seguir'));}
   function reset(){round=0;finished=false;save('');render();}
-  function heading(r){root.append(el('p',`${round+1} / ${cfg.rounds.length}`,'p-rot'),el('h2',r.title||cfg.title));if(r.scene)root.append(el('p',r.scene,'cena ler'));if(r.question)root.append(el('p',r.question,'pergunta'));}
+  function heading(r){root.append(el('p',`${round+1} / ${cfg.rounds.length}`,'p-rot'),el('h2',r.title||cfg.title));if(r.scene)root.append(el('p',r.scene,'cena ler'));if(r.question)root.append(el('p',r.question,'pergunta'));if(r.support){const help=el('details');help.append(el('summary','Uma pista'),el('p',r.support));root.append(help);}}
   function classify(r){
     const grid=el('div',undefined,'escolhas');
-    r.options.forEach((o,i)=>grid.append(button(o,()=>{
-      if(i===r.correct){after(r.feedback);}else{announce(r.wrong?.[i]||'Volta ao caso e procura uma pista. Podes tentar outra vez.');}
-    })));
+    const order=r.options.map((_,i)=>i);const rotation=(Number(cfg.id)+round)%order.length;order.push(...order.splice(0,rotation));order.forEach(i=>{const o=r.options[i];grid.append(button(o,()=>{
+      if(i===r.correct){after(r.feedback);}else{announce(r.wrong?.[i]||'Esta resposta precisa de uma pista que a sustente. '+(r.support||'Volta ao que está efetivamente descrito e distingue-o daquilo que seria apenas uma possibilidade.')+' Podes escolher novamente.');}
+    }));});
     root.append(grid);
   }
   function choices(r){
@@ -111,7 +111,7 @@
     root.append(first,box,el('p','Esta escolha representa a posição de quem está a usar o ecrã. Não simula uma votação real da turma.','p-nota'));
   }
   function render(){
-    clear();document.getElementById('estado').textContent=`Ronda ${round+1}`;const r=cfg.rounds[round];heading(r);
+    clear();document.getElementById('estado').textContent=`Ronda ${round+1} de ${cfg.rounds.length}`;const r=cfg.rounds[round];heading(r);
     const types={classify,listen:classify,match,perspective,order,build,branch:choices,power:choices,reveal,audit,vote};
     (types[r.type||cfg.type]||choices)(r);
   }
